@@ -5,7 +5,7 @@ let browser = null;
 let page = null;
 const initializeBrowser = async () => {
   browser = await puppeteer.launch({
-    headless: false
+    headless: true,
   });
   page = await browser.newPage();
 };
@@ -23,7 +23,7 @@ afterAll(async () => {
 });
 
 describe('Titles Tests', () => {
-    test('The title Descomplica TOP should render', async () => {
+    test('The title "Descomplica" TOP should render', async () => {
       page.emulate({
         viewport: {
           width: 500,
@@ -43,7 +43,7 @@ describe('Titles Tests', () => {
   
     }, 16000);
 
-    test('The subtitle "E estão só te esperando para garantir a aprovação no Enem 2021. Garanta sua vaga e comece hoje."', async () => {
+    test('The subtitle "E estão só te esperando para garantir a aprovação no Enem 2021. Garanta sua vaga e comece hoje." should render', async () => {
       page.emulate({
         viewport: {
           width: 500,
