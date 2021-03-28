@@ -24,14 +24,6 @@ afterAll(async () => {
 
 describe('Titles Tests', () => {
     test('The title "Descomplica" TOP should render', async () => {
-      page.emulate({
-        viewport: {
-          width: 500,
-          height: 2400
-        },
-        userAgent: ''
-      });
-  
       await page.goto('https://descomplica.com.br');
       await page.waitForSelector('h1');
   
@@ -44,14 +36,6 @@ describe('Titles Tests', () => {
     }, 16000);
 
     test('The subtitle "E estão só te esperando para garantir a aprovação no Enem 2021. Garanta sua vaga e comece hoje." should render', async () => {
-      page.emulate({
-        viewport: {
-          width: 500,
-          height: 2400
-        },
-        userAgent: ''
-      });
-  
       await page.goto('https://descomplica.com.br');
       await page.waitForSelector('h1');
   
